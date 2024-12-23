@@ -45,7 +45,7 @@ my-project/
 ### 2. Prerequisites
 
 - **Maven**: Ensure Maven (version >= 3.0) is installed.
-- **Java**: Install Java 17 (or 11) JDK.
+- **Java**: Install Java 17 JDK.
 - **JBMC**: Install JBMC binary (e.g., version 6.4.1).
   - Download it from [JBMC GitHub Releases](https://github.com/diffblue/cbmc/releases) or compile from source.
 
@@ -117,7 +117,7 @@ jbmc dev.coms4156.project.HrDatabaseFacadePropertiesTest \
 jbmc dev.coms4156.project.HrDatabaseFacadePropertiesTest \
   --function dev.coms4156.project.HrDatabaseFacadePropertiesTest.testConcurrentGetInstance \
   --classpath target/classes \
-  --unwind 5 \
+  --unwind 10 \
   --java-threading \
   --trace
 ```
