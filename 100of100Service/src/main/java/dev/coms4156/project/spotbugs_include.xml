@@ -1,0 +1,26 @@
+<FindBugsFilter>
+    <!-- 1. check null pointer-->
+    <Match>
+        <Bug pattern="NP_*" />
+    </Match>
+
+    <!-- 2. check thread security -->
+    <Match>
+        <Bug pattern="IS_*" />
+    </Match>
+
+    <!-- 3. check sql injection -->
+    <Match>
+        <Bug pattern="SQL_INJECTION_JDBC" />
+    </Match>
+
+    <!-- 4. check performance -->
+    <Match>
+        <Bug pattern="DM_*" />
+    </Match>
+
+    <!-- 5. check security bugs -->
+    <Match>
+        <Bug category="SECURITY"/>
+    </Match>
+</FindBugsFilter>

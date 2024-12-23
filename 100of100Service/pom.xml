@@ -134,12 +134,25 @@
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
 				<version>4.8.6.0</version>
+				<configuration>
+					<includeFilterFile> src/main/java/dev/coms4156/project/spotbugs_include.xml </includeFilterFile>
+					<effort>Max</effort>
+					<threshold>Low</threshold>
+					<plugins>
+						<plugin>
+							<groupId>com.h3xstream.findsecbugs</groupId>
+							<artifactId>findsecbugs-plugin</artifactId>
+							<version>1.12.0</version>
+						</plugin>
+					</plugins>
+				</configuration>
 				<dependencies>
 					<!-- overwrite dependency on spotbugs if you want to specify the version of spotbugs -->
 					<dependency>
 						<groupId>com.github.spotbugs</groupId>
 						<artifactId>spotbugs</artifactId>
 						<version>4.8.6</version>
+						<scope>compile</scope>
 					</dependency>
 				</dependencies>
 			</plugin>

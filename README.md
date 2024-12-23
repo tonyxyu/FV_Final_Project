@@ -179,7 +179,27 @@ jbmc dev.coms4156.project.HrDatabaseFacadePropertiesTest \
 
 ---
 
+### 4. Running the SpotBugs Checks
+After compilation, run SpotBugs using:   
+```bash
+mvn spotbugs:spotbugs
+```
+which could generate a spotbugsXml.xml in target directory, which contains the bugs Spotbugs have found.    
+Or could runs run in GUI using   
+```bash
+mvn spotbugs:gui
+```
+To set more spotbugs checking rules, add more properties in spotbugs_include.xml  
+
+---
+
 ### Notes
 - Adjust the `--unwind` depth as necessary for your test scenarios.
 
 ---
+
+
+
+
+
+
